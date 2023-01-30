@@ -32,6 +32,7 @@ import deployedContracts from "./contracts/hardhat_contracts.json";
 import { getRPCPollTime, Transactor, Web3ModalSetup } from "./helpers";
 import { Home, ExampleUI, Hints, Subgraph } from "./views";
 import { useStaticJsonRPC } from "./hooks";
+import Bank from "./components/Bank";
 
 const { ethers } = require("ethers");
 /*
@@ -383,7 +384,7 @@ function App(props) {
                 and give you a form to interact with it locally
             */}
 
-          <Contract
+          <Bank
             name="Bank"
             price={price}
             signer={userSigner}
